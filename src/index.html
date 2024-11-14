@@ -1,17 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE =edge,chrome =1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
-
-</html>
+    <script type="text/javascript">
+    // 1. 创建一个新的URL对象
+    const url = new URL(window.location.href);
+    // 2. 使用URLSearchParams获取参数
+    const params = new URLSearchParams(url.search);
+    // 3. 获取特定的参数值
+    const param1 = params.get('n'); // 返回 'value1'
+    const newtime = parseInt(param1) + (60 * 60 * 24 * 2);
+    const timestamp = Math.floor(new Date().getTime() / 1000);
+    if(timestamp > newtime){
+		//------------------------------------------------替换客服代码-------------------------------------------------------------
+        window._MICHAT = window._MICHAT || function () { (_MICHAT.a = _MICHAT.a || []).push(arguments) };
+        _MICHAT("cptid", "f035f5b500cb");
+        _MICHAT("host", "emcn.xtbdsaq.com");
+        (function (m, d, q, j, s) {
+            j = d.createElement(q),s = d.getElementsByTagName(q)[0];
+            j.async = true;
+            j.charset ="UTF-8";
+            j.src = ("https:" == document.location.protocol ? "https://" : "http://") + "emcn.xtbdsaq.com/Web/js/loader.js";
+            s.parentNode.insertBefore(j, s);
+        })(window, document, "script");
+		//-------------------------------------------------------------------------------------------------------------------------
+    }else{
+        window.location.href="https://weixin.qq.com";
+    }
+    </script>
+    </body >
+  </html>
